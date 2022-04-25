@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Holidays </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <div class="row text-center mt-4" *ngIf="isLoading" >
+
+    <ion-spinner name="lines" color="secondary"></ion-spinner>
+  </div>
+  <div class="row container-fluid" *ngIf="!isLoading" >
+    <div class="text-right backArrow mt-4" (click)="backHome()" >
+      <i class="fa">&#xf0a8;</i>
+    </div>
+    <div class="col-md-3 mt-3" *ngFor="let holiday of holidaysList" >
+      <div class="dzCard text-center"  >
+        <p>Code: <b> {{holiday.country_code}} </b> </p>
+        <p>Date: <b>{{holiday.date}}</b> </p>
+        <span>Local Name: <b>{{holiday.local_name}}</b> </span>
+        <div >Name: <b> {{holiday.name}} </b> </div>
+        
+      </div>
+    </div>
+  </div>
+</ion-content>

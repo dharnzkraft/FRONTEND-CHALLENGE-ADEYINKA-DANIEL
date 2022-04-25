@@ -1,0 +1,24 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Countries & Code
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="row container-fluid" >
+    <div class="row text-center mt-4" *ngIf="isLoading" >
+
+      <ion-spinner name="lines" color="secondary"></ion-spinner>
+    </div>
+    <div class="col-md-3 mt-3" *ngFor="let country of countryList" >
+      <div class="dzCard text-center" (click)="openHolidays(country.code)" >
+        
+          <p>Name: <b>{{country.name}}</b> </p>
+          <span>Code: <b>{{country.code}}</b> </span>
+        
+      </div>
+    </div>
+  </div>
+</ion-content>

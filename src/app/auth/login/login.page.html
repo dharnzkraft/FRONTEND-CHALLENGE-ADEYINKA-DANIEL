@@ -1,0 +1,39 @@
+
+
+<ion-content>
+  <div class="container d-flex h-100">
+
+    <div class="m-auto formBody mt-4 d-flex ">
+      <div class="m-auto" >
+        <div class="mt-4">
+          <h1 class="header-title1" >
+            Welcome Back
+          </h1>
+          <p>Sign in to your account with the required information.</p>
+        </div>
+        <div class="row">
+          <div>
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+              <ion-item lines="none" >
+                <ion-input type="email" placeholder="email" formControlName="email"></ion-input>
+                <ion-icon name="mail-outline" slot="start" ></ion-icon>
+              </ion-item>
+              <br>
+              <ion-item lines="none">
+                <ion-input type="password" placeholder="password" formControlName="password" minLength="6" ></ion-input>
+                <ion-icon name="lock-closed-outline" slot="start" ></ion-icon>
+                <ion-icon name="eye-outline" slot="end" ></ion-icon>
+              </ion-item>
+              <br>
+              <ion-button type="submit" color="primary" expand="block" [disabled]="!loginForm.valid" >
+                Sign In
+              </ion-button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+</ion-content>
