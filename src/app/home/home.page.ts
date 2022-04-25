@@ -24,9 +24,7 @@ export class HomePage implements OnInit {
       this.isLoading = false;
       const mappedCountry: CountryI[] = res;
       this.countryList = mappedCountry;
-      console.log(mappedCountry);
     },(error) =>{
-      console.log(error);
     });
   }
 

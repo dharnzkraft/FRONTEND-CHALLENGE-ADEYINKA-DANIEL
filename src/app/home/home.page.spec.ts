@@ -26,10 +26,7 @@ describe('HomePage', () => {
     expect(component).toBeTruthy();
   });
 
-  // it('should navigate', () => {
-  //   const navigateSpy = spyOn(router, 'navigate');
-  //   expect(navigateSpy).toHaveBeenCalledWith(['/home']);
-  // });
+
 
 
 });

@@ -21,7 +21,6 @@ export class CountryHolidaysPage implements OnInit {
   ngOnInit() {
     this.service.getCountryHolidays().subscribe((response: any)=>{
       this.isLoading = false;
-      console.log(response);
       this.holidaysList = response.holidays;
     });
   }
